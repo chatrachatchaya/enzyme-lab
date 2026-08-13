@@ -352,6 +352,48 @@ td.num{font-family:'IBM Plex Mono',monospace}
   table,figure{page-break-inside:avoid}
 }
 
+/* ---------- คู่มือวิธีเล่น ---------- */
+details.howto{
+  background:var(--white);border:1px solid var(--line);
+  padding:0;margin-bottom:22px;
+}
+details.howto>summary{
+  list-style:none;cursor:pointer;padding:18px 22px;
+  font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:20px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+}
+details.howto>summary::-webkit-details-marker{display:none}
+details.howto>summary::after{
+  content:'\25BC';font-size:11px;color:var(--muted);transition:transform .15s ease;
+}
+details.howto[open]>summary::after{transform:rotate(180deg)}
+details.howto>summary:hover{background:#F2F6F3}
+.howbody{padding:0 22px 22px}
+.howgrid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));
+  gap:18px;margin-top:6px;
+}
+.howstep{margin:0}
+.howart{
+  border:1px solid var(--line);background:var(--paper);
+  padding:8px;margin-bottom:8px;
+}
+.howart svg{display:block;width:100%;height:auto}
+.hownum{
+  font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;
+  color:var(--signal);text-transform:uppercase;
+}
+.howstep b{
+  display:block;font-family:'Chakra Petch',sans-serif;font-weight:600;
+  font-size:15px;margin:2px 0 3px;
+}
+.howstep span{display:block;font-size:13.5px;color:var(--muted);line-height:1.55}
+@media(max-width:600px){
+  details.howto>summary{padding:14px 16px;font-size:17px}
+  .howbody{padding:0 16px 16px}
+  .howgrid{gap:14px}
+}
+
 /* ---------- จอสัมผัส ---------- */
 .well{
   touch-action:manipulation;              /* กันแตะสองครั้งแล้วซูม */
@@ -401,6 +443,155 @@ td.num{font-family:'IBM Plex Mono',monospace}
   <div class="stamp" id="stamp">แผ่นหลุม 10 × 10</div>
 </header>
 
+<details class="howto noprint" open>
+  <summary>วิธีเล่น ตั้งแต่เริ่มจนส่งงาน</summary>
+  <div class="howbody">
+  <div class="howgrid">
+
+    <figure class="howstep">
+      <div class="howart">
+        <svg viewBox="0 0 200 96" xmlns="http://www.w3.org/2000/svg">
+          <rect x="14" y="16" width="78" height="9" rx="2" fill="#C3D2C8"/>
+          <rect x="14" y="29" width="78" height="22" rx="2" fill="#FBFCFB" stroke="#2F6F5E" stroke-width="2"/>
+          <rect x="22" y="37" width="44" height="6" rx="3" fill="#16241F"/>
+          <rect x="108" y="16" width="78" height="9" rx="2" fill="#C3D2C8"/>
+          <rect x="108" y="29" width="78" height="22" rx="2" fill="#FBFCFB" stroke="#B7C7BD" stroke-width="2"/>
+          <rect x="116" y="37" width="34" height="6" rx="3" fill="#8FA396"/>
+          <rect x="14" y="63" width="172" height="9" rx="2" fill="#E2EAE4"/>
+          <rect x="14" y="78" width="120" height="9" rx="2" fill="#E2EAE4"/>
+        </svg>
+      </div>
+      <figcaption>
+        <span class="hownum">ขั้นที่ 1</span>
+        <b>กรอกชื่อและรหัส</b>
+        <span>กรอกให้ครบก่อนเริ่ม ข้อมูลนี้จะไปปรากฏบนใบสรุปที่พิมพ์ส่งอาจารย์</span>
+      </figcaption>
+    </figure>
+
+    <figure class="howstep">
+      <div class="howart">
+        <svg viewBox="0 0 200 96" xmlns="http://www.w3.org/2000/svg">
+          <g fill="#DDE6E0" stroke="#B7C7BD">
+            <circle cx="26" cy="20" r="7"/><circle cx="48" cy="20" r="7"/><circle cx="70" cy="20" r="7"/>
+            <circle cx="92" cy="20" r="7"/><circle cx="114" cy="20" r="7"/><circle cx="136" cy="20" r="7"/>
+            <circle cx="26" cy="42" r="7"/><circle cx="48" cy="42" r="7"/><circle cx="70" cy="42" r="7"/>
+            <circle cx="92" cy="42" r="7"/><circle cx="114" cy="42" r="7"/><circle cx="136" cy="42" r="7"/>
+            <circle cx="26" cy="64" r="7"/><circle cx="48" cy="64" r="7"/><circle cx="70" cy="64" r="7"/>
+            <circle cx="92" cy="64" r="7"/><circle cx="114" cy="64" r="7"/><circle cx="136" cy="64" r="7"/>
+          </g>
+          <rect x="52" y="20" width="60" height="46" rx="2" fill="#FBFCFB" stroke="#16241F" stroke-width="2.5"/>
+          <text x="82" y="53" text-anchor="middle" font-family="Chakra Petch, sans-serif"
+                font-size="30" font-weight="700" fill="#16241F">3</text>
+          <rect x="152" y="30" width="38" height="26" rx="2" fill="#16241F"/>
+          <rect x="159" y="41" width="24" height="5" rx="2.5" fill="#E7EDE8"/>
+        </svg>
+      </div>
+      <figcaption>
+        <span class="hownum">ขั้นที่ 2</span>
+        <b>กดเริ่มรอบ</b>
+        <span>ระบบนับถอยหลัง 3&ndash;2&ndash;1 ให้เตรียมตัว แล้วจับเวลา 20 วินาที</span>
+      </figcaption>
+    </figure>
+
+    <figure class="howstep">
+      <div class="howart">
+        <svg viewBox="0 0 200 96" xmlns="http://www.w3.org/2000/svg">
+          <g fill="#DDE6E0" stroke="#B7C7BD">
+            <circle cx="26" cy="20" r="7"/><circle cx="48" cy="20" r="7"/><circle cx="92" cy="20" r="7"/>
+            <circle cx="114" cy="20" r="7"/><circle cx="136" cy="20" r="7"/><circle cx="158" cy="20" r="7"/>
+            <circle cx="26" cy="42" r="7"/><circle cx="48" cy="42" r="7"/><circle cx="70" cy="42" r="7"/>
+            <circle cx="114" cy="42" r="7"/><circle cx="136" cy="42" r="7"/><circle cx="158" cy="42" r="7"/>
+            <circle cx="26" cy="64" r="7"/><circle cx="70" cy="64" r="7"/><circle cx="92" cy="64" r="7"/>
+            <circle cx="114" cy="64" r="7"/><circle cx="136" cy="64" r="7"/><circle cx="158" cy="64" r="7"/>
+          </g>
+          <circle cx="70" cy="20" r="7" fill="#C9D5CD" stroke="#B7C7BD"/>
+          <circle cx="92" cy="42" r="7" fill="#2F6F5E" stroke="#2F6F5E"/>
+          <circle cx="48" cy="64" r="7" fill="#C9D5CD" stroke="#B7C7BD"/>
+          <path d="M92,42 L104,66 L98,66 L104,80 L98,82 L93,68 L88,72 Z"
+                fill="#16241F" stroke="#FBFCFB" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <figcaption>
+        <span class="hownum">ขั้นที่ 3</span>
+        <b>คลิกหาซับสเตรต</b>
+        <span>ทุกหลุมหน้าตาเหมือนกันหมด ต้องเดาเอา คลิกให้เร็วที่สุด โดนหลุมว่างจะกะพริบเทา</span>
+      </figcaption>
+    </figure>
+
+    <figure class="howstep">
+      <div class="howart">
+        <svg viewBox="0 0 200 96" xmlns="http://www.w3.org/2000/svg">
+          <path d="M32,74 L32,44 Q32,24 54,24 L88,24 L96,40 L114,40 L122,24 L156,24
+                   Q178,24 178,44 L178,74 Z" fill="#DDE6E0" stroke="#2F6F5E" stroke-width="2.5"/>
+          <rect x="94" y="24" width="22" height="16" rx="4" fill="#C8873A" stroke="#8A5B1F" stroke-width="1.5"/>
+          <path d="M136,20 L124,30 M140,28 L130,36" stroke="#C8873A" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+          <rect x="32" y="82" width="146" height="7" fill="#DDE6E0"/>
+          <rect x="32" y="82" width="88" height="7" fill="#2F6F5E"/>
+        </svg>
+      </div>
+      <figcaption>
+        <span class="hownum">ขั้นที่ 4</span>
+        <b>เจอแล้วรอเร่งปฏิกิริยา</b>
+        <span>ซับสเตรตเข้าไปนั่งใน active site แถบเขียวเดินจนหมด (1.2 วินาที) จึงคลิกต่อได้</span>
+      </figcaption>
+    </figure>
+
+    <figure class="howstep">
+      <div class="howart">
+        <svg viewBox="0 0 200 96" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8,72 L8,46 Q8,30 26,30 L50,30 L57,43 L70,43 L77,30 L101,30
+                   Q119,30 119,46 L119,72 Z" transform="translate(-4,0) scale(0.82) translate(6,8)"
+                fill="#DDE6E0" stroke="#9C4A3C" stroke-width="3"/>
+          <rect x="44" y="32" width="22" height="16" rx="3" fill="#9C4A3C" stroke="#63281F" stroke-width="1.5"/>
+          <text x="55" y="86" text-anchor="middle" font-family="IBM Plex Mono, monospace"
+                font-size="11" fill="#9C4A3C">A</text>
+          <line x1="100" y1="14" x2="100" y2="76" stroke="#B7C7BD" stroke-dasharray="3 3"/>
+          <path d="M8,72 L8,46 Q8,30 26,30 L50,30 L57,43 L70,43 L77,30 L101,30
+                   Q119,30 119,46 L119,72 Z" transform="translate(116,0) scale(0.82) translate(6,8)"
+                fill="#DDE6E0" stroke="#C8873A" stroke-width="3"/>
+          <circle cx="180" cy="67" r="8" fill="#C8873A" stroke="#8A5B1F" stroke-width="1.5"/>
+          <path d="M147,32 L161,46 M161,32 L147,46" stroke="#5F726A" stroke-width="3" stroke-linecap="round"/>
+          <text x="163" y="86" text-anchor="middle" font-family="IBM Plex Mono, monospace"
+                font-size="11" fill="#C8873A">B</text>
+        </svg>
+      </div>
+      <figcaption>
+        <span class="hownum">ขั้นที่ 5</span>
+        <b>ระวังตัวยับยั้งสองแบบ</b>
+        <span>A เข้าไปยึดช่องจับโดยตรง ส่วน B เกาะที่อื่นแล้วทำให้เอนไซม์หยุดทำงาน สังเกตให้ดีว่าต่างกันอย่างไร</span>
+      </figcaption>
+    </figure>
+
+    <figure class="howstep">
+      <div class="howart">
+        <svg viewBox="0 0 200 96" xmlns="http://www.w3.org/2000/svg">
+          <rect x="26" y="8" width="112" height="82" rx="2" fill="#FBFCFB" stroke="#B7C7BD" stroke-width="2"/>
+          <rect x="36" y="17" width="56" height="7" rx="2" fill="#16241F"/>
+          <rect x="36" y="29" width="92" height="4" rx="2" fill="#DDE6E0"/>
+          <rect x="36" y="37" width="72" height="4" rx="2" fill="#DDE6E0"/>
+          <path d="M38,80 C58,80 62,60 78,56 C94,52 108,51 126,50"
+                fill="none" stroke="#2F6F5E" stroke-width="2.5"/>
+          <line x1="36" y1="80" x2="128" y2="80" stroke="#16241F" stroke-width="1.5"/>
+          <line x1="36" y1="48" x2="36" y2="80" stroke="#16241F" stroke-width="1.5"/>
+          <g fill="#2F6F5E"><circle cx="58" cy="70" r="2.6"/><circle cx="80" cy="56" r="2.6"/><circle cx="104" cy="52" r="2.6"/></g>
+          <rect x="148" y="30" width="40" height="30" rx="3" fill="#16241F"/>
+          <rect x="155" y="22" width="26" height="12" rx="1" fill="#FBFCFB" stroke="#16241F" stroke-width="1.5"/>
+          <rect x="155" y="52" width="26" height="18" rx="1" fill="#FBFCFB" stroke="#16241F" stroke-width="1.5"/>
+          <text x="168" y="65" text-anchor="middle" font-family="IBM Plex Mono, monospace"
+                font-size="9" font-weight="500" fill="#16241F">PDF</text>
+        </svg>
+      </div>
+      <figcaption>
+        <span class="hownum">ขั้นที่ 6</span>
+        <b>ครบ 15 รอบ แล้วส่งงาน</b>
+        <span>ใบสรุปเปิดเองพร้อมตารางและกราฟ เขียนตอบให้ครบ แล้วกด Ctrl + P (Mac: &#8984; + P) เลือกบันทึกเป็น PDF</span>
+      </figcaption>
+    </figure>
+
+  </div>
+  </div>
+</details>
+
 <!-- ==================== 1. ข้อมูลผู้ทำการทดลอง ==================== -->
 <section class="panel noprint">
   <p class="eyebrow">ขั้นที่ 1</p>
@@ -422,19 +613,18 @@ td.num{font-family:'IBM Plex Mono',monospace}
   </div>
 </section>
 
-<!-- ==================== 2. วิธีเล่น ==================== -->
 <section class="panel noprint">
-  <p class="eyebrow">ขั้นที่ 2</p>
-  <h2>กติกา</h2>
-  <p>คุณคือเอนไซม์ แผ่นหลุมด้านล่างมี 100 หลุมที่มองไม่เห็นข้างใน บางหลุมมีซับสเตรตซ่อนอยู่ คลิกหาให้เจอและเก็บให้ได้มากที่สุดภายใน 20 วินาที</p>
+  <p class="eyebrow">ก่อนเริ่ม</p>
+  <h2>กติกาโดยย่อ</h2>
   <ul style="margin:0 0 12px;padding-left:20px">
     <li>คลิกโดนหลุมว่าง เสียเวลาเปล่า</li>
-    <li>คลิกโดนซับสเตรต เก็บได้ 1 หน่วย แล้ว<strong>ต้องรอ 1.2 วินาที</strong>เพื่อเร่งปฏิกิริยา ระหว่างนี้คลิกไม่ได้</li>
+    <li>คลิกโดนซับสเตรต เก็บได้ 1 หน่วย แล้ว<strong>ต้องรอ 1.2 วินาที</strong>เพื่อเร่งปฏิกิริยา</li>
     <li>ซับสเตรตที่เก็บแล้วจะหายไปจากแผ่น ไม่กลับมาอีก</li>
     <li>ทุกหลุมหน้าตาเหมือนกันหมดตลอดเวลา จำตำแหน่งไม่ได้</li>
   </ul>
   <p id="planLine"></p>
-  <p>ชุดที่ 2 และ 3 จะมีตัวยับยั้ง <strong>A</strong> และ <strong>B</strong> เพิ่มเข้ามา — <em>กลไกของตัวยับยั้งทั้งสองไม่ถูกเปิดเผย คุณต้องสรุปเองจากข้อมูล</em></p>
+  <p>ชุดที่ 2 และ 3 จะมีตัวยับยั้ง <strong>A</strong> และ <strong>B</strong> เพิ่มเข้ามา &mdash;
+     <em>กลไกของตัวยับยั้งทั้งสองไม่ถูกเปิดเผย คุณต้องสรุปเองจากข้อมูล</em></p>
 </section>
 
 <!-- ==================== 3. การทดลอง ==================== -->
